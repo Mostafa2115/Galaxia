@@ -1,0 +1,1163 @@
+/* =========================================================
+   ENCELADUS PAGE
+   ========================================================= */
+
+.enceladus-page {
+  min-height: 100vh;
+
+  background: #070812;
+
+  color: #ffffff;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.enceladus-hero {
+  position: relative;
+
+  min-height: 720px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #05060c;
+}
+
+.enceladus-hero .hero-bg {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: brightness(0.5);
+
+  transform: scale(1.02);
+}
+
+.enceladus-hero .hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 5, 12, 0.95) 0%,
+      rgba(4, 5, 12, 0.68) 45%,
+      rgba(4, 5, 12, 0.25) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #070812 0%,
+      transparent 35%
+    );
+}
+
+.enceladus-hero .hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(900px, 88%);
+
+  margin-left: 7%;
+
+  padding-top: 80px;
+}
+
+.enceladus-number {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #b9e6f2;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+.enceladus-hero h1 {
+  margin: 0 0 25px;
+
+  font-size: clamp(55px, 8vw, 115px);
+
+  line-height: 0.95;
+
+  font-weight: 700;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #b9dce6
+  );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.enceladus-hero .hero-content p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #c0c1cd;
+
+  font-size: 18px;
+
+  line-height: 1.85;
+}
+
+.enceladus-page .hero-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 38px;
+}
+
+.enceladus-page .hero-buttons button {
+  padding: 14px 27px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.enceladus-page .hero-buttons .btn-primary {
+  border: none;
+
+  background: #79b9cc;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(121, 185, 204, 0.25);
+}
+
+.enceladus-page .hero-buttons .btn-primary:hover {
+  transform: translateY(-4px);
+
+  background: #8dcbdd;
+
+  box-shadow:
+    0 15px 40px rgba(121, 185, 204, 0.4);
+}
+
+.enceladus-page .hero-buttons .btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: #ffffff;
+
+  backdrop-filter: blur(10px);
+}
+
+.enceladus-page .hero-buttons .btn-secondary:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(121, 185, 204, 0.6);
+
+  background: rgba(121, 185, 204, 0.12);
+}
+
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+
+.enceladus-page .facts-section {
+  padding: 110px 7%;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #070812 0%,
+      #090a15 100%
+    );
+}
+
+.enceladus-page .facts-section h2 {
+  margin: 0 0 15px;
+
+  font-size: clamp(35px, 5vw, 58px);
+
+  line-height: 1.1;
+}
+
+.enceladus-page .facts-section > p {
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+
+  color: #a8a9b8;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.enceladus-page .facts-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.enceladus-page .fact-card {
+  padding: 30px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 20px;
+
+  transition: 0.3s ease;
+}
+
+.enceladus-page .fact-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(121, 185, 204, 0.45);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.enceladus-page .fact-card h3 {
+  margin: 0 0 12px;
+
+  color: #b9e6f2;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+}
+
+.enceladus-page .fact-card span {
+  color: #ffffff;
+
+  font-size: 22px;
+
+  font-weight: 600;
+}
+/* =========================================================
+   ABOUT ENCELADUS
+   ========================================================= */
+
+.enceladus-page .about-section {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 120px 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.enceladus-page .about-image {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.enceladus-page .about-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(121, 185, 204, 0.18),
+      transparent 70%
+    );
+
+  filter: blur(15px);
+}
+
+.enceladus-page .about-image img {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 480px;
+
+  height: 480px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.enceladus-page .about-content > span {
+  color: #b9e6f2;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.enceladus-page .about-content h2 {
+  margin: 18px 0 25px;
+
+  font-size: clamp(34px, 4vw, 54px);
+
+  line-height: 1.1;
+}
+
+.enceladus-page .about-content p {
+  margin-bottom: 20px;
+
+  color: #aeb0bf;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   INTERESTING FACTS
+   ========================================================= */
+
+.enceladus-page .interesting-section {
+  padding: 110px 7%;
+
+  background: #090a15;
+}
+
+.enceladus-page .section-header {
+  max-width: 800px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.enceladus-page .section-header > span {
+  color: #b9e6f2;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+.enceladus-page .section-header h2 {
+  margin: 18px 0;
+
+  font-size: clamp(35px, 5vw, 58px);
+
+  line-height: 1.1;
+}
+
+.enceladus-page .section-header p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #a8a9b8;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.enceladus-page .facts-cards {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.enceladus-page .fact-box {
+  padding: 30px 25px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.enceladus-page .fact-box:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(121, 185, 204, 0.4);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.enceladus-page .fact-icon {
+  margin-bottom: 22px;
+
+  font-size: 38px;
+}
+
+.enceladus-page .fact-box h3 {
+  margin: 0 0 14px;
+
+  font-size: 20px;
+}
+
+.enceladus-page .fact-box p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+/* =========================================================
+   ENCELADUS SURFACE
+   ========================================================= */
+
+.enceladus-page .surface-section {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 120px 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.enceladus-page .surface-image {
+  display: flex;
+
+  justify-content: center;
+}
+
+.enceladus-page .surface-image img {
+  width: 100%;
+
+  max-width: 500px;
+
+  height: 480px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.enceladus-page .surface-content > span {
+  color: #b9e6f2;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.enceladus-page .surface-content h2 {
+  margin: 18px 0 25px;
+
+  font-size: clamp(34px, 4vw, 54px);
+
+  line-height: 1.1;
+}
+
+.enceladus-page .surface-content > p {
+  margin-bottom: 20px;
+
+  color: #aeb0bf;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.enceladus-page .surface-highlights {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+.enceladus-page .surface-item {
+  padding: 20px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 16px;
+}
+
+.enceladus-page .surface-item h3 {
+  margin: 0 0 10px;
+
+  font-size: 16px;
+}
+
+.enceladus-page .surface-item p {
+  margin: 0;
+
+  color: #9698a8;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   ENCELADUS LANDSCAPE
+   ========================================================= */
+
+.enceladus-page .landscape-section {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 120px 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.enceladus-page .landscape-content > span {
+  color: #b9e6f2;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.enceladus-page .landscape-content h2 {
+  margin: 18px 0 25px;
+
+  font-size: clamp(34px, 4vw, 54px);
+
+  line-height: 1.1;
+}
+
+.enceladus-page .landscape-content p {
+  margin-bottom: 20px;
+
+  color: #aeb0bf;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.enceladus-page .landscape-image {
+  display: flex;
+
+  justify-content: center;
+}
+
+.enceladus-page .landscape-image img {
+  width: 100%;
+
+  max-width: 500px;
+
+  height: 480px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================================
+   MISSIONS
+   ========================================================= */
+
+.enceladus-page .missions-section {
+  padding: 110px 7%;
+
+  background: #090a15;
+}
+
+.enceladus-page .timeline {
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.enceladus-page .mission-card {
+  padding: 30px 25px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.enceladus-page .mission-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(121, 185, 204, 0.4);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.enceladus-page .mission-card .year {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  padding: 7px 14px;
+
+  border-radius: 20px;
+
+  color: #ffffff;
+
+  background: rgba(121, 185, 204, 0.15);
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.enceladus-page .mission-card h3 {
+  margin: 0 0 15px;
+
+  font-size: 21px;
+}
+
+.enceladus-page .mission-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.enceladus-page .gallery-section {
+  padding: 110px 7%;
+  background: #070812;
+}
+
+.enceladus-page .gallery-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.enceladus-page .gallery-card {
+  position: relative;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #10111d;
+}
+
+.enceladus-page .gallery-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.enceladus-page .gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+.enceladus-page .gallery-overlay {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  padding: 45px 20px 20px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(4, 5, 12, 0.9)
+    );
+}
+
+.enceladus-page .gallery-overlay h3 {
+  margin: 0;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   DID YOU KNOW
+   ========================================================= */
+
+.enceladus-page .did-section {
+  padding: 110px 7%;
+  background: #090a15;
+}
+
+.enceladus-page .did-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.enceladus-page .did-card {
+  padding: 30px 25px;
+
+  text-align: center;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.enceladus-page .did-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(121, 185, 204, 0.4);
+}
+
+.enceladus-page .did-card > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-size: 35px;
+}
+
+.enceladus-page .did-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 19px;
+}
+
+.enceladus-page .did-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   EXPLORE OTHER MOONS
+   ========================================================= */
+
+.enceladus-page .next-moons {
+  padding: 110px 7%;
+  background: #070812;
+}
+
+.enceladus-page .next-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+.enceladus-page .next-card {
+  overflow: hidden;
+
+  padding-bottom: 25px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.enceladus-page .next-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(121, 185, 204, 0.4);
+}
+
+.enceladus-page .next-card img {
+  width: 100%;
+  height: 250px;
+
+  object-fit: cover;
+}
+
+.enceladus-page .next-card h3,
+.enceladus-page .next-card p,
+.enceladus-page .next-card a {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.enceladus-page .next-card h3 {
+  margin-top: 22px;
+  margin-bottom: 10px;
+
+  font-size: 25px;
+}
+
+.enceladus-page .next-card p {
+  min-height: 65px;
+
+  margin-bottom: 20px;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.enceladus-page .next-card a {
+  display: inline-flex;
+
+  padding: 10px 20px;
+
+  border: 1px solid rgba(121, 185, 204, 0.5);
+
+  border-radius: 25px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition: 0.3s ease;
+}
+
+.enceladus-page .next-card a:hover {
+  background: #79b9cc;
+
+  border-color: #79b9cc;
+}
+
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.enceladus-page .faq-section {
+  padding: 110px 7%;
+  background: #090a15;
+}
+
+.enceladus-page .faq-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.enceladus-page .faq-container details {
+  margin-bottom: 15px;
+
+  padding: 22px 25px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 15px;
+
+  transition: 0.3s ease;
+}
+
+.enceladus-page .faq-container details:hover {
+  border-color: rgba(121, 185, 204, 0.35);
+}
+
+.enceladus-page .faq-container summary {
+  cursor: pointer;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  list-style: none;
+}
+
+.enceladus-page .faq-container summary::-webkit-details-marker {
+  display: none;
+}
+
+.enceladus-page .faq-container summary::after {
+  content: "+";
+
+  float: right;
+
+  color: #b9e6f2;
+
+  font-size: 22px;
+}
+
+.enceladus-page .faq-container details[open] summary::after {
+  content: "−";
+}
+
+.enceladus-page .faq-container details p {
+  margin: 18px 0 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .enceladus-page .facts-cards,
+  .enceladus-page .did-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .enceladus-page .gallery-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .enceladus-page .timeline {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .enceladus-hero {
+    min-height: 650px;
+  }
+
+  .enceladus-hero .hero-content {
+    width: 88%;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  .enceladus-hero .hero-content p {
+    margin: auto;
+
+    font-size: 15px;
+  }
+
+  .enceladus-page .hero-buttons {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .enceladus-page .facts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enceladus-page .about-section,
+  .enceladus-page .surface-section,
+  .enceladus-page .landscape-section {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .enceladus-page .surface-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .enceladus-page .surface-image {
+    order: 1;
+  }
+
+  .enceladus-page .surface-content {
+    order: 2;
+  }
+
+  .enceladus-page .landscape-content {
+    order: 2;
+  }
+
+  .enceladus-page .landscape-image {
+    order: 1;
+  }
+
+  .enceladus-page .next-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .enceladus-page .facts-cards,
+  .enceladus-page .did-grid,
+  .enceladus-page .gallery-grid,
+  .enceladus-page .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .enceladus-page .about-image img,
+  .enceladus-page .surface-image img,
+  .enceladus-page .landscape-image img {
+    height: 330px;
+  }
+
+  .enceladus-page .gallery-card {
+    height: 260px;
+  }
+
+  .enceladus-page .section-header {
+    margin-bottom: 40px;
+  }
+
+  .enceladus-page .interesting-section,
+  .enceladus-page .missions-section,
+  .enceladus-page .gallery-section,
+  .enceladus-page .did-section,
+  .enceladus-page .next-moons,
+  .enceladus-page .faq-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+}

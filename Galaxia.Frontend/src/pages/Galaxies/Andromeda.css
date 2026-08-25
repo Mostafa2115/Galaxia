@@ -1,0 +1,1733 @@
+/* =========================================================
+   ANDROMEDA PAGE
+   ========================================================= */
+
+.andromeda-page {
+  min-height: 100vh;
+
+  background: #05060d;
+
+  color: #ffffff;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.andromeda-hero {
+  position: relative;
+
+  min-height: 720px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #03040a;
+}
+
+.andromeda-hero-bg {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: brightness(0.42) saturate(1.1);
+
+  animation:
+    andromedaHeroZoom 18s ease-in-out infinite alternate;
+}
+
+.andromeda-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 4, 11, 0.97) 0%,
+      rgba(3, 4, 11, 0.68) 45%,
+      rgba(3, 4, 11, 0.18) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #05060d 0%,
+      transparent 40%
+    );
+}
+
+.andromeda-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(900px, 88%);
+
+  margin-left: 7%;
+
+  padding-top: 70px;
+}
+
+.andromeda-hero-content > span {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #a98cff;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+.andromeda-hero-content h1 {
+  margin: 0 0 25px;
+
+  font-size: clamp(60px, 9vw, 120px);
+
+  line-height: 0.95;
+
+  font-weight: 700;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #c9bcff
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.andromeda-hero-content p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #c0c2d0;
+
+  font-size: 18px;
+
+  line-height: 1.85;
+}
+
+.andromeda-back-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-top: 38px;
+
+  padding: 13px 24px;
+
+  border: 1px solid rgba(169, 140, 255, 0.4);
+
+  border-radius: 30px;
+
+  background: rgba(128, 101, 216, 0.08);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.andromeda-back-btn:hover {
+  transform: translateY(-4px);
+
+  background: #8065d8;
+
+  border-color: #8065d8;
+
+  box-shadow:
+    0 12px 35px rgba(128, 101, 216, 0.3);
+}
+
+
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
+
+.andromeda-section-title {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 820px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.andromeda-section-title > span {
+  color: #a98cff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+.andromeda-section-title h2 {
+  margin: 18px 0;
+
+  font-size: clamp(35px, 5vw, 58px);
+
+  line-height: 1.1;
+}
+
+.andromeda-section-title p {
+  max-width: 730px;
+
+  margin: 0 auto;
+
+  color: #a7a9b8;
+
+  font-size: 16px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+
+.andromeda-overview {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #05060d 0%,
+      #090a16 100%
+    );
+}
+
+.andromeda-overview::before {
+  content: "";
+
+  position: absolute;
+
+  top: 10%;
+  left: -140px;
+
+  width: 320px;
+  height: 320px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(128, 101, 216, 0.12),
+      transparent 70%
+    );
+}
+
+.andromeda-overview-grid {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.andromeda-info-card {
+  padding: 30px 25px;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.andromeda-info-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.andromeda-info-card > span {
+  color: #a98cff;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.andromeda-info-card h3 {
+  margin: 15px 0 12px;
+
+  font-size: 20px;
+
+  line-height: 1.3;
+}
+
+.andromeda-info-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   STRUCTURE
+   ========================================================= */
+
+.andromeda-structure {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background: #070814;
+}
+
+.andromeda-structure-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.andromeda-structure-card {
+  position: relative;
+
+  padding: 32px 25px;
+
+  overflow: hidden;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.andromeda-structure-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.3);
+}
+
+.andromeda-structure-card .structure-number {
+  margin-bottom: 22px;
+
+  color: #8065d8;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.andromeda-structure-card h3 {
+  margin: 0 0 14px;
+
+  font-size: 21px;
+}
+
+.andromeda-structure-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO ANIMATION
+   ========================================================= */
+
+@keyframes andromedaHeroZoom {
+
+  0% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1.08);
+  }
+
+}
+/* =========================================================
+   GALACTIC CENTER
+   ========================================================= */
+
+.andromeda-center {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(128, 101, 216, 0.1),
+      transparent 50%
+    ),
+    #05060d;
+}
+
+.andromeda-center::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(169, 140, 255, 0.08);
+
+  box-shadow:
+    0 0 120px rgba(128, 101, 216, 0.08);
+}
+
+.andromeda-center-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 50px;
+}
+
+.andromeda-center-highlight {
+  padding: 40px 35px;
+
+  text-align: center;
+
+  background: #10111e;
+
+  border: 1px solid rgba(128, 101, 216, 0.2);
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.andromeda-center-highlight .center-symbol {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 25px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(169, 140, 255, 0.25),
+      rgba(128, 101, 216, 0.04)
+    );
+
+  border: 1px solid rgba(169, 140, 255, 0.25);
+
+  color: #c5b5ff;
+
+  font-size: 38px;
+
+  box-shadow:
+    0 0 50px rgba(128, 101, 216, 0.2);
+}
+
+.andromeda-center-highlight h3 {
+  margin: 0 0 15px;
+
+  font-size: 24px;
+}
+
+.andromeda-center-highlight p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CENTER FACTS
+   ========================================================= */
+
+.andromeda-center-facts {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.andromeda-center-fact {
+  padding: 25px;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+
+  transition: 0.3s ease;
+}
+
+.andromeda-center-fact:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(128, 101, 216, 0.4);
+}
+
+.andromeda-center-fact span {
+  color: #a98cff;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.andromeda-center-fact h3 {
+  margin: 12px 0 0;
+
+  font-size: 17px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   SIZE & SCALE
+   ========================================================= */
+
+.andromeda-scale {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(128, 101, 216, 0.13),
+      transparent 55%
+    ),
+    #070814;
+}
+
+.andromeda-scale-stats {
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.andromeda-scale-stat {
+  padding: 32px 20px;
+
+  background: rgba(16, 17, 30, 0.85);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 20px;
+
+  transition: 0.3s ease;
+}
+
+.andromeda-scale-stat:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.andromeda-scale-stat h3 {
+  margin: 0 0 10px;
+
+  color: #c5b5ff;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+}
+
+.andromeda-scale-stat span {
+  color: #a5a7b6;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   MILKY WAY CONNECTION
+   ========================================================= */
+
+.andromeda-milky-way {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #070814 0%,
+      #05060d 100%
+    );
+}
+
+.andromeda-comparison {
+  max-width: 950px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+.andromeda-comparison-card {
+  padding: 35px 30px;
+
+  text-align: center;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.andromeda-comparison-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.andromeda-comparison-card span {
+  color: #a98cff;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.andromeda-comparison-card h3 {
+  margin: 15px 0 12px;
+
+  font-size: 27px;
+}
+
+.andromeda-comparison-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.andromeda-comparison-symbol {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(128, 101, 216, 0.12);
+
+  border: 1px solid rgba(128, 101, 216, 0.25);
+
+  color: #c5b5ff;
+
+  font-size: 24px;
+}
+/* =========================================================
+   FORMATION & HISTORY
+   ========================================================= */
+
+.andromeda-history {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background: #070814;
+}
+
+.andromeda-history-timeline {
+  position: relative;
+
+  max-width: 1000px;
+
+  margin: auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.andromeda-history-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 31px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(128, 101, 216, 0.45),
+      transparent
+    );
+}
+
+.andromeda-history-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 65px 1fr;
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+.andromeda-history-item .history-marker {
+  position: relative;
+
+  z-index: 2;
+
+  width: 63px;
+  height: 63px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #10111e;
+
+  border: 1px solid rgba(128, 101, 216, 0.45);
+
+  color: #a98cff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.andromeda-history-item .history-content {
+  padding: 28px 30px;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 20px;
+
+  transition: 0.3s ease;
+}
+
+.andromeda-history-item .history-content:hover {
+  transform: translateX(6px);
+
+  border-color: rgba(128, 101, 216, 0.4);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.andromeda-history-item .history-content > span {
+  color: #a98cff;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.andromeda-history-item .history-content h3 {
+  margin: 12px 0;
+
+  font-size: 22px;
+}
+
+.andromeda-history-item .history-content p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   SATELLITE GALAXIES
+   ========================================================= */
+
+.andromeda-satellites {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(128, 101, 216, 0.1),
+      transparent 55%
+    ),
+    #05060d;
+}
+
+.andromeda-satellite-grid {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.andromeda-satellite-card {
+  position: relative;
+
+  padding: 32px 25px;
+
+  overflow: hidden;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.andromeda-satellite-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -70px;
+  right: -70px;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(128, 101, 216, 0.16),
+      transparent 70%
+    );
+}
+
+.andromeda-satellite-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.satellite-number {
+  position: relative;
+
+  margin-bottom: 22px;
+
+  color: #8065d8;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.andromeda-satellite-card h3 {
+  position: relative;
+
+  margin: 0 0 14px;
+
+  font-size: 23px;
+}
+
+.andromeda-satellite-card p {
+  position: relative;
+
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FUTURE ENCOUNTER
+   ========================================================= */
+
+.andromeda-future {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #070814 0%,
+      #05060d 100%
+    );
+}
+
+.andromeda-future-card {
+  position: relative;
+
+  max-width: 800px;
+
+  margin: auto;
+
+  padding: 45px 40px;
+
+  background: #10111e;
+
+  border: 1px solid rgba(128, 101, 216, 0.2);
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3);
+
+  transition: 0.3s ease;
+}
+
+.andromeda-future-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 25px 65px rgba(0, 0, 0, 0.35);
+}
+
+.future-icon {
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 25px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(169, 140, 255, 0.22),
+      rgba(128, 101, 216, 0.04)
+    );
+
+  border: 1px solid rgba(169, 140, 255, 0.25);
+
+  color: #c5b5ff;
+
+  font-size: 30px;
+
+  box-shadow:
+    0 0 45px rgba(128, 101, 216, 0.18);
+}
+
+.andromeda-future-card h3 {
+  margin: 0 0 15px;
+
+  font-size: 26px;
+}
+
+.andromeda-future-card p {
+  max-width: 680px;
+
+  margin: auto;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+/* =========================================================
+   INTERESTING FACTS
+   ========================================================= */
+
+.andromeda-facts {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background: #090a16;
+}
+
+.andromeda-facts-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.andromeda-fact-card {
+  position: relative;
+
+  padding: 32px 25px;
+
+  overflow: hidden;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.andromeda-fact-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -70px;
+  right: -70px;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(128, 101, 216, 0.16),
+      transparent 70%
+    );
+}
+
+.andromeda-fact-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.andromeda-fact-card .fact-number {
+  position: relative;
+
+  margin-bottom: 22px;
+
+  color: #8065d8;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.andromeda-fact-card h3 {
+  position: relative;
+
+  margin: 0 0 14px;
+
+  font-size: 20px;
+}
+
+.andromeda-fact-card p {
+  position: relative;
+
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   DID YOU KNOW
+   ========================================================= */
+
+.andromeda-did-you-know {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #070814 0%,
+      #05060d 100%
+    );
+}
+
+.andromeda-did-grid {
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.andromeda-did-card {
+  position: relative;
+
+  padding: 32px 25px;
+
+  overflow: hidden;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.andromeda-did-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.did-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 16px;
+
+  background: rgba(128, 101, 216, 0.12);
+
+  border: 1px solid rgba(128, 101, 216, 0.2);
+
+  font-size: 24px;
+}
+
+.andromeda-did-card h3 {
+  margin: 0 0 14px;
+
+  font-size: 20px;
+}
+
+.andromeda-did-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FINAL JOURNEY
+   ========================================================= */
+
+.andromeda-journey {
+  position: relative;
+
+  min-height: 480px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 90px 7%;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(128, 101, 216, 0.18),
+      transparent 55%
+    ),
+    #060711;
+}
+
+.andromeda-journey::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(128, 101, 216, 0.12);
+
+  box-shadow:
+    0 0 120px rgba(128, 101, 216, 0.1);
+
+  animation:
+    andromedaGlow 6s ease-in-out infinite alternate;
+}
+
+.andromeda-journey-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 780px;
+}
+
+.andromeda-journey-content > span {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: #a98cff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+.andromeda-journey-content h2 {
+  margin: 0 0 20px;
+
+  font-size: clamp(40px, 5vw, 62px);
+
+  line-height: 1.1;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #c5b5ff
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.andromeda-journey-content p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #a7a9b8;
+
+  font-size: 16px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   CATALOG BUTTON
+   ========================================================= */
+
+.andromeda-catalog-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 32px;
+
+  padding: 14px 27px;
+
+  border: 1px solid rgba(128, 101, 216, 0.45);
+
+  border-radius: 30px;
+
+  background: rgba(128, 101, 216, 0.08);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.andromeda-catalog-btn:hover {
+  transform: translateY(-4px);
+
+  background: #8065d8;
+
+  border-color: #8065d8;
+
+  box-shadow:
+    0 14px 38px rgba(128, 101, 216, 0.32);
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes andromedaGlow {
+
+  0% {
+    opacity: 0.35;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0.95);
+  }
+
+  100% {
+    opacity: 0.7;
+
+    transform:
+      translate(-50%, -50%)
+      scale(1.05);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .andromeda-overview-grid,
+  .andromeda-structure-grid,
+  .andromeda-facts-grid,
+  .andromeda-did-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .andromeda-scale-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .andromeda-hero {
+    min-height: 650px;
+  }
+
+  .andromeda-hero-content {
+    width: 88%;
+
+    margin: 0 auto;
+
+    padding-top: 60px;
+
+    text-align: center;
+  }
+
+  .andromeda-hero-content p {
+    margin: 0 auto;
+
+    font-size: 15px;
+  }
+
+  .andromeda-overview,
+  .andromeda-structure,
+  .andromeda-center,
+  .andromeda-scale,
+  .andromeda-milky-way,
+  .andromeda-history,
+  .andromeda-satellites,
+  .andromeda-future,
+  .andromeda-facts,
+  .andromeda-did-you-know {
+    padding-top: 85px;
+
+    padding-bottom: 85px;
+  }
+
+  .andromeda-overview-grid,
+  .andromeda-structure-grid,
+  .andromeda-facts-grid,
+  .andromeda-did-grid,
+  .andromeda-satellite-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .andromeda-center-content {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .andromeda-center-facts {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .andromeda-comparison {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .andromeda-comparison-symbol {
+    margin: auto;
+
+    transform: rotate(90deg);
+  }
+
+  .andromeda-history-item {
+    grid-template-columns: 55px 1fr;
+
+    gap: 18px;
+  }
+
+  .andromeda-history-item .history-marker {
+    width: 53px;
+    height: 53px;
+  }
+
+  .andromeda-history-timeline::before {
+    left: 26px;
+  }
+
+  .andromeda-journey {
+    min-height: 420px;
+
+    padding: 75px 6%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+  .andromeda-hero {
+    min-height: 590px;
+  }
+
+  .andromeda-hero-content > span {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
+  .andromeda-hero-content h1 {
+    font-size: 55px;
+  }
+
+  .andromeda-hero-content p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .andromeda-section-title h2 {
+    font-size: 34px;
+  }
+
+  .andromeda-section-title p {
+    font-size: 14px;
+  }
+
+  .andromeda-center-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .andromeda-center-highlight {
+    padding: 30px 22px;
+  }
+
+  .andromeda-history-item {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .andromeda-history-item .history-marker {
+    width: 48px;
+    height: 48px;
+  }
+
+  .andromeda-history-timeline::before {
+    display: none;
+  }
+
+  .andromeda-history-item .history-content {
+    padding: 24px 22px;
+  }
+
+  .andromeda-scale-stats {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .andromeda-scale-stat h3 {
+    font-size: 27px;
+  }
+
+  .andromeda-comparison-card {
+    padding: 28px 22px;
+  }
+
+  .andromeda-future-card {
+    padding: 35px 22px;
+  }
+
+  .andromeda-journey {
+    min-height: 370px;
+
+    padding: 65px 5%;
+  }
+
+  .andromeda-journey-content > span {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
+  .andromeda-journey-content h2 {
+    font-size: 36px;
+  }
+
+  .andromeda-journey-content p {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .andromeda-hero-bg,
+  .andromeda-journey::before {
+    animation: none;
+  }
+
+  .andromeda-info-card,
+  .andromeda-structure-card,
+  .andromeda-history-item .history-content,
+  .andromeda-comparison-card,
+  .andromeda-satellite-card,
+  .andromeda-future-card,
+  .andromeda-fact-card,
+  .andromeda-did-card {
+    transition: none;
+  }
+
+}

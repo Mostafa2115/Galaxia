@@ -1,0 +1,1591 @@
+/* =========================================================
+   MILKY WAY PAGE
+   ========================================================= */
+
+.milky-way-page {
+  min-height: 100vh;
+
+  background: #05060d;
+
+  color: #ffffff;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.milky-way-hero {
+  position: relative;
+
+  min-height: 720px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #03040a;
+}
+
+.milky-way-hero-bg {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: brightness(0.42) saturate(1.1);
+
+  animation:
+    milkyWayHeroZoom 18s ease-in-out infinite alternate;
+}
+
+.milky-way-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 4, 11, 0.97) 0%,
+      rgba(3, 4, 11, 0.68) 45%,
+      rgba(3, 4, 11, 0.18) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #05060d 0%,
+      transparent 40%
+    );
+}
+
+.milky-way-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(900px, 88%);
+
+  margin-left: 7%;
+
+  padding-top: 70px;
+}
+
+.milky-way-hero-content > span {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #a98cff;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+.milky-way-hero-content h1 {
+  margin: 0 0 25px;
+
+  font-size: clamp(60px, 9vw, 120px);
+
+  line-height: 0.95;
+
+  font-weight: 700;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #c9bcff
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.milky-way-hero-content p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #c0c2d0;
+
+  font-size: 18px;
+
+  line-height: 1.85;
+}
+
+.milky-way-back-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-top: 38px;
+
+  padding: 13px 24px;
+
+  border: 1px solid rgba(169, 140, 255, 0.4);
+
+  border-radius: 30px;
+
+  background: rgba(128, 101, 216, 0.08);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.milky-way-back-btn:hover {
+  transform: translateY(-4px);
+
+  background: #8065d8;
+
+  border-color: #8065d8;
+
+  box-shadow:
+    0 12px 35px rgba(128, 101, 216, 0.3);
+}
+
+
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
+
+.milky-way-section-title {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 820px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.milky-way-section-title > span {
+  color: #a98cff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+.milky-way-section-title h2 {
+  margin: 18px 0;
+
+  font-size: clamp(35px, 5vw, 58px);
+
+  line-height: 1.1;
+}
+
+.milky-way-section-title p {
+  max-width: 730px;
+
+  margin: 0 auto;
+
+  color: #a7a9b8;
+
+  font-size: 16px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+
+.milky-way-overview {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #05060d 0%,
+      #090a16 100%
+    );
+}
+
+.milky-way-overview::before {
+  content: "";
+
+  position: absolute;
+
+  top: 10%;
+  left: -140px;
+
+  width: 320px;
+  height: 320px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(128, 101, 216, 0.12),
+      transparent 70%
+    );
+}
+
+.milky-way-overview-grid {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.milky-way-info-card {
+  padding: 30px 25px;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.milky-way-info-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.milky-way-info-card > span {
+  color: #a98cff;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.milky-way-info-card h3 {
+  margin: 15px 0 12px;
+
+  font-size: 20px;
+
+  line-height: 1.3;
+}
+
+.milky-way-info-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   STRUCTURE
+   ========================================================= */
+
+.milky-way-structure {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background: #070814;
+}
+
+.milky-way-structure-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.milky-way-structure-card {
+  position: relative;
+
+  padding: 32px 25px;
+
+  overflow: hidden;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.milky-way-structure-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.3);
+}
+
+.structure-number {
+  margin-bottom: 22px;
+
+  color: #8065d8;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.milky-way-structure-card h3 {
+  margin: 0 0 14px;
+
+  font-size: 21px;
+}
+
+.milky-way-structure-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO ANIMATION
+   ========================================================= */
+
+@keyframes milkyWayHeroZoom {
+
+  0% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1.08);
+  }
+
+}
+/* =========================================================
+   GALACTIC CENTER
+   ========================================================= */
+
+.milky-way-center {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(128, 101, 216, 0.1),
+      transparent 50%
+    ),
+    #05060d;
+}
+
+.milky-way-center::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(169, 140, 255, 0.08);
+
+  box-shadow:
+    0 0 120px rgba(128, 101, 216, 0.08);
+}
+
+.milky-way-center-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 50px;
+}
+
+.center-highlight {
+  padding: 40px 35px;
+
+  text-align: center;
+
+  background: #10111e;
+
+  border: 1px solid rgba(128, 101, 216, 0.2);
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.center-symbol {
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 25px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(169, 140, 255, 0.25),
+      rgba(128, 101, 216, 0.04)
+    );
+
+  border: 1px solid rgba(169, 140, 255, 0.25);
+
+  color: #c5b5ff;
+
+  font-size: 38px;
+
+  box-shadow:
+    0 0 50px rgba(128, 101, 216, 0.2);
+}
+
+.center-highlight h3 {
+  margin: 0 0 15px;
+
+  font-size: 24px;
+}
+
+.center-highlight p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CENTER FACTS
+   ========================================================= */
+
+.center-facts {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.center-fact {
+  padding: 25px;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+
+  transition: 0.3s ease;
+}
+
+.center-fact:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(128, 101, 216, 0.4);
+}
+
+.center-fact span {
+  color: #a98cff;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.center-fact h3 {
+  margin: 12px 0 0;
+
+  font-size: 17px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   OUR LOCATION
+   ========================================================= */
+
+.milky-way-location {
+  position: relative;
+
+  padding: 115px 7%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #090a16 0%,
+      #070814 100%
+    );
+}
+
+.location-content {
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.location-card {
+  padding: 32px 28px;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.location-card span {
+  color: #a98cff;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.location-card h3 {
+  margin: 15px 0 13px;
+
+  font-size: 21px;
+}
+
+.location-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   GALAXY SCALE
+   ========================================================= */
+
+.milky-way-scale {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(128, 101, 216, 0.13),
+      transparent 55%
+    ),
+    #05060d;
+}
+
+.scale-stats {
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.scale-stat {
+  padding: 32px 20px;
+
+  background: rgba(16, 17, 30, 0.85);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 20px;
+
+  transition: 0.3s ease;
+}
+
+.scale-stat:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.scale-stat h3 {
+  margin: 0 0 10px;
+
+  color: #c5b5ff;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+}
+
+.scale-stat span {
+  color: #a5a7b6;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+/* =========================================================
+   FORMATION & HISTORY
+   ========================================================= */
+
+.milky-way-history {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background: #070814;
+}
+
+.history-timeline {
+  position: relative;
+
+  max-width: 1000px;
+
+  margin: auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.history-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 31px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(128, 101, 216, 0.45),
+      transparent
+    );
+}
+
+.history-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 65px 1fr;
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+.history-marker {
+  position: relative;
+
+  z-index: 2;
+
+  width: 63px;
+  height: 63px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #10111e;
+
+  border: 1px solid rgba(128, 101, 216, 0.45);
+
+  color: #a98cff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.history-content {
+  padding: 28px 30px;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 20px;
+
+  transition: 0.3s ease;
+}
+
+.history-content:hover {
+  transform: translateX(6px);
+
+  border-color: rgba(128, 101, 216, 0.4);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.history-content > span {
+  color: #a98cff;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.history-content h3 {
+  margin: 12px 0;
+
+  font-size: 22px;
+}
+
+.history-content p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   MILKY WAY & ANDROMEDA
+   ========================================================= */
+
+.milky-way-andromeda {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(128, 101, 216, 0.1),
+      transparent 55%
+    ),
+    #05060d;
+}
+
+.andromeda-comparison {
+  max-width: 950px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+.comparison-card {
+  padding: 35px 30px;
+
+  text-align: center;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.comparison-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.comparison-card span {
+  color: #a98cff;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.comparison-card h3 {
+  margin: 15px 0 12px;
+
+  font-size: 27px;
+}
+
+.comparison-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.comparison-symbol {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(128, 101, 216, 0.12);
+
+  border: 1px solid rgba(128, 101, 216, 0.25);
+
+  color: #c5b5ff;
+
+  font-size: 24px;
+}
+
+
+/* =========================================================
+   INTERESTING FACTS
+   ========================================================= */
+
+.milky-way-facts {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background: #090a16;
+}
+
+.milky-way-facts-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.milky-way-fact-card {
+  position: relative;
+
+  padding: 32px 25px;
+
+  overflow: hidden;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.milky-way-fact-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -70px;
+  right: -70px;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(128, 101, 216, 0.16),
+      transparent 70%
+    );
+}
+
+.milky-way-fact-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.fact-number {
+  position: relative;
+
+  margin-bottom: 22px;
+
+  color: #8065d8;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.milky-way-fact-card h3 {
+  position: relative;
+
+  margin: 0 0 14px;
+
+  font-size: 20px;
+}
+
+.milky-way-fact-card p {
+  position: relative;
+
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+/* =========================================================
+   DID YOU KNOW
+   ========================================================= */
+
+.milky-way-did-you-know {
+  position: relative;
+
+  padding: 115px 7%;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #070814 0%,
+      #05060d 100%
+    );
+}
+
+.did-you-know-grid {
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.did-you-know-card {
+  position: relative;
+
+  padding: 32px 25px;
+
+  overflow: hidden;
+
+  background: #10111e;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.did-you-know-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(128, 101, 216, 0.42);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.did-you-know-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 16px;
+
+  background: rgba(128, 101, 216, 0.12);
+
+  border: 1px solid rgba(128, 101, 216, 0.2);
+
+  font-size: 24px;
+}
+
+.did-you-know-card h3 {
+  margin: 0 0 14px;
+
+  font-size: 20px;
+}
+
+.did-you-know-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   GALACTIC JOURNEY
+   ========================================================= */
+
+.milky-way-journey {
+  position: relative;
+
+  min-height: 480px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 90px 7%;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(128, 101, 216, 0.18),
+      transparent 55%
+    ),
+    #060711;
+}
+
+.milky-way-journey::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(128, 101, 216, 0.12);
+
+  box-shadow:
+    0 0 120px rgba(128, 101, 216, 0.1);
+
+  animation:
+    milkyWayGlow 6s ease-in-out infinite alternate;
+}
+
+.journey-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 780px;
+}
+
+.journey-content > span {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: #a98cff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+.journey-content h2 {
+  margin: 0 0 20px;
+
+  font-size: clamp(40px, 5vw, 62px);
+
+  line-height: 1.1;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #c5b5ff
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.journey-content p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #a7a9b8;
+
+  font-size: 16px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   CATALOG BUTTON
+   ========================================================= */
+
+.milky-way-catalog-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 32px;
+
+  padding: 14px 27px;
+
+  border: 1px solid rgba(128, 101, 216, 0.45);
+
+  border-radius: 30px;
+
+  background: rgba(128, 101, 216, 0.08);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.milky-way-catalog-btn:hover {
+  transform: translateY(-4px);
+
+  background: #8065d8;
+
+  border-color: #8065d8;
+
+  box-shadow:
+    0 14px 38px rgba(128, 101, 216, 0.32);
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes milkyWayGlow {
+
+  0% {
+    opacity: 0.35;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0.95);
+  }
+
+  100% {
+    opacity: 0.7;
+
+    transform:
+      translate(-50%, -50%)
+      scale(1.05);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .milky-way-overview-grid,
+  .milky-way-structure-grid,
+  .milky-way-facts-grid,
+  .did-you-know-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .scale-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .milky-way-hero {
+    min-height: 650px;
+  }
+
+  .milky-way-hero-content {
+    width: 88%;
+
+    margin: 0 auto;
+
+    padding-top: 60px;
+
+    text-align: center;
+  }
+
+  .milky-way-hero-content p {
+    margin: 0 auto;
+
+    font-size: 15px;
+  }
+
+  .milky-way-overview,
+  .milky-way-structure,
+  .milky-way-center,
+  .milky-way-location,
+  .milky-way-scale,
+  .milky-way-history,
+  .milky-way-andromeda,
+  .milky-way-facts,
+  .milky-way-did-you-know {
+    padding-top: 85px;
+
+    padding-bottom: 85px;
+  }
+
+  .milky-way-overview-grid,
+  .milky-way-structure-grid,
+  .milky-way-facts-grid,
+  .did-you-know-grid,
+  .location-content {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .milky-way-center-content {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .center-facts {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .andromeda-comparison {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .comparison-symbol {
+    margin: auto;
+
+    transform: rotate(90deg);
+  }
+
+  .history-item {
+    grid-template-columns: 55px 1fr;
+
+    gap: 18px;
+  }
+
+  .history-marker {
+    width: 53px;
+    height: 53px;
+  }
+
+  .history-timeline::before {
+    left: 26px;
+  }
+
+  .milky-way-journey {
+    min-height: 420px;
+
+    padding: 75px 6%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+  .milky-way-hero {
+    min-height: 590px;
+  }
+
+  .milky-way-hero-content > span {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
+  .milky-way-hero-content h1 {
+    font-size: 55px;
+  }
+
+  .milky-way-hero-content p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .milky-way-section-title h2 {
+    font-size: 34px;
+  }
+
+  .milky-way-section-title p {
+    font-size: 14px;
+  }
+
+  .center-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .center-highlight {
+    padding: 30px 22px;
+  }
+
+  .history-item {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .history-marker {
+    width: 48px;
+    height: 48px;
+  }
+
+  .history-timeline::before {
+    display: none;
+  }
+
+  .history-content {
+    padding: 24px 22px;
+  }
+
+  .scale-stats {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .scale-stat h3 {
+    font-size: 27px;
+  }
+
+  .comparison-card {
+    padding: 28px 22px;
+  }
+
+  .milky-way-journey {
+    min-height: 370px;
+
+    padding: 65px 5%;
+  }
+
+  .journey-content > span {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
+  .journey-content h2 {
+    font-size: 36px;
+  }
+
+  .journey-content p {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .milky-way-hero-bg,
+  .milky-way-journey::before {
+    animation: none;
+  }
+
+  .milky-way-info-card,
+  .milky-way-structure-card,
+  .history-content,
+  .comparison-card,
+  .milky-way-fact-card,
+  .did-you-know-card {
+    transition: none;
+  }
+
+}

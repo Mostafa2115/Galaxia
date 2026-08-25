@@ -1,0 +1,662 @@
+/* =========================================================
+   ALL MOONS PAGE
+   ========================================================= */
+
+.all-moons-page {
+  min-height: 100vh;
+  background: #070812;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.all-moons-hero {
+  position: relative;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(130, 70, 255, 0.18),
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      #090a15 0%,
+      #080914 50%,
+      #05060d 100%
+    );
+
+  overflow: hidden;
+}
+
+.all-moons-hero::before {
+  content: "";
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  top: -300px;
+  left: -250px;
+
+  background: radial-gradient(
+    circle,
+    rgba(124, 77, 255, 0.18),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.all-moons-hero::after {
+  content: "";
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  bottom: -350px;
+  right: -200px;
+
+  background: radial-gradient(
+    circle,
+    rgba(63, 110, 255, 0.15),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.all-moons-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+  opacity: 0.35;
+}
+
+.all-moons-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(900px, 90%);
+  margin-top: 70px;
+}
+
+.all-moons-hero-content span {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #9b6cff;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+.all-moons-hero-content h1 {
+  margin: 0 0 25px;
+
+  font-size: clamp(65px, 10vw, 120px);
+  line-height: 0.95;
+  font-weight: 700;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #cdb9ff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.all-moons-hero-content p {
+  max-width: 760px;
+  margin: 0 auto;
+
+  color: #b9bac8;
+
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.all-moons-hero-buttons {
+  margin-top: 40px;
+}
+
+.all-moons-hero-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 32px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6d3df5
+  );
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow:
+    0 10px 35px rgba(124, 77, 255, 0.3);
+
+  transition: 0.3s ease;
+}
+
+.all-moons-hero-buttons a:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 45px rgba(124, 77, 255, 0.45);
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.moons-intro {
+  padding: 110px 7% 70px;
+
+  background: #080914;
+}
+
+.moons-intro-content {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.moons-intro-content span {
+  color: #9b6cff;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.moons-intro-content h2 {
+  margin: 18px 0;
+
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.1;
+}
+
+.moons-intro-content p {
+  margin: auto;
+
+  max-width: 700px;
+
+  color: #a9aaba;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   MOON COLLECTION
+   ========================================================= */
+
+.moon-collection {
+  padding: 70px 7% 120px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #080914 0%,
+      #060710 100%
+    );
+}
+
+.moon-section-title {
+  max-width: 800px;
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.moon-section-title > span {
+  color: #9b6cff;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.moon-section-title h2 {
+  margin: 18px 0;
+
+  font-size: clamp(36px, 5vw, 58px);
+}
+
+.moon-section-title p {
+  color: #a9aaba;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   MOON GRID
+   ========================================================= */
+
+.moon-grid {
+  max-width: 1250px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   MOON CARD
+   ========================================================= */
+
+.moon-card {
+  position: relative;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.moon-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(139, 92, 246, 0.45);
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.35),
+    0 0 30px rgba(124, 77, 255, 0.08);
+}
+
+
+/* =========================================================
+   CARD IMAGE
+   ========================================================= */
+
+.moon-card-image {
+  position: relative;
+
+  height: 270px;
+
+  overflow: hidden;
+
+  background: #05060c;
+}
+
+.moon-card-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 45%,
+      rgba(7, 8, 18, 0.9) 100%
+    );
+}
+
+.moon-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+.moon-card:hover .moon-card-image img {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.moon-card-content {
+  padding: 25px 25px 30px;
+}
+
+.moon-card-content > span {
+  color: #9670ff;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.moon-card-content h3 {
+  margin: 10px 0 12px;
+
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.moon-card-content p {
+  min-height: 78px;
+
+  margin: 0 0 24px;
+
+  color: #aeb0bf;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.moon-card-content a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 20px;
+
+  border: 1px solid rgba(139, 92, 246, 0.55);
+
+  border-radius: 25px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+.moon-card-content a:hover {
+  background: #8b5cf6;
+
+  border-color: #8b5cf6;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CALL TO ACTION
+   ========================================================= */
+
+.moons-cta {
+  position: relative;
+
+  padding: 120px 7%;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(124, 77, 255, 0.15),
+      transparent 55%
+    ),
+    #070812;
+}
+
+.moons-cta-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.moons-cta-content span {
+  color: #9b6cff;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.moons-cta-content h2 {
+  margin: 20px 0;
+
+  font-size: clamp(34px, 5vw, 58px);
+}
+
+.moons-cta-content p {
+  max-width: 700px;
+  margin: 0 auto 35px;
+
+  color: #a9aaba;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.moons-cta-content a {
+  display: inline-flex;
+
+  padding: 14px 30px;
+
+  border-radius: 30px;
+
+  background: #8b5cf6;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.moons-cta-content a:hover {
+  transform: translateY(-3px);
+
+  background: #9b6cff;
+
+  box-shadow:
+    0 10px 30px rgba(139, 92, 246, 0.3);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.moons-footer {
+  background: #05060d;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  padding: 70px 7% 25px;
+}
+
+.moons-footer-content {
+  max-width: 1250px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    2fr 1fr 1fr;
+
+  gap: 60px;
+}
+
+.moons-footer-brand h2 {
+  margin: 0 0 15px;
+
+  color: #b99aff;
+
+  font-size: 28px;
+
+  letter-spacing: 4px;
+}
+
+.moons-footer-brand p {
+  max-width: 400px;
+
+  color: #858797;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.moons-footer-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.moons-footer-links h3 {
+  margin: 0 0 10px;
+
+  font-size: 16px;
+}
+
+.moons-footer-links a {
+  color: #858797;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition: 0.25s ease;
+}
+
+.moons-footer-links a:hover {
+  color: #9b6cff;
+
+  transform: translateX(4px);
+}
+
+.moons-footer-bottom {
+  max-width: 1250px;
+
+  margin: 50px auto 0;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  text-align: center;
+}
+
+.moons-footer-bottom p {
+  margin: 0;
+
+  color: #626474;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .moon-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .moons-footer-content {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .moons-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .all-moons-hero {
+    min-height: 650px;
+  }
+
+  .all-moons-hero-content p {
+    font-size: 15px;
+  }
+
+  .moon-grid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .moon-card-image {
+    height: 250px;
+  }
+
+  .moons-intro,
+  .moon-collection {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .moons-footer {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .moons-footer-content {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .moons-footer-brand {
+    grid-column: auto;
+  }
+
+}

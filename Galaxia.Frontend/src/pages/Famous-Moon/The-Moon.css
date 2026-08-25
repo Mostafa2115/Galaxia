@@ -1,0 +1,1168 @@
+/* =========================================================
+   THE MOON PAGE
+   ========================================================= */
+
+.moon-page {
+  min-height: 100vh;
+  background: #070812;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.moon-hero {
+  position: relative;
+  min-height: 720px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #05060c;
+}
+
+.moon-hero .hero-bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: brightness(0.55);
+
+  transform: scale(1.02);
+}
+
+.moon-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 5, 12, 0.95) 0%,
+      rgba(4, 5, 12, 0.65) 45%,
+      rgba(4, 5, 12, 0.25) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #070812 0%,
+      transparent 35%
+    );
+}
+
+.moon-hero .hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(900px, 88%);
+
+  margin-left: 7%;
+
+  padding-top: 80px;
+}
+
+.moon-number {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #b8a5ff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+.moon-hero h1 {
+  margin: 0 0 25px;
+
+  font-size: clamp(65px, 10vw, 125px);
+
+  line-height: 0.95;
+
+  font-weight: 700;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #c8c4d9
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.moon-hero .hero-content p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #c0c1cd;
+
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.hero-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 38px;
+}
+
+.hero-buttons button {
+  padding: 14px 27px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.hero-buttons .btn-primary {
+  border: none;
+
+  background: #8b5cf6;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(139, 92, 246, 0.25);
+}
+
+.hero-buttons .btn-primary:hover {
+  transform: translateY(-4px);
+
+  background: #9b6cff;
+
+  box-shadow:
+    0 15px 40px rgba(139, 92, 246, 0.4);
+}
+
+.hero-buttons .btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: #ffffff;
+
+  backdrop-filter: blur(10px);
+}
+
+.hero-buttons .btn-secondary:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(139, 92, 246, 0.6);
+
+  background: rgba(139, 92, 246, 0.12);
+}
+
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+
+.moon-page .facts-section {
+  padding: 110px 7%;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #070812 0%,
+      #090a15 100%
+    );
+}
+
+.moon-page .facts-section h2 {
+  margin: 0 0 15px;
+
+  font-size: clamp(35px, 5vw, 58px);
+
+  line-height: 1.1;
+}
+
+.moon-page .facts-section > p {
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+
+  color: #a8a9b8;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.moon-page .facts-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.moon-page .fact-card {
+  padding: 30px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 20px;
+
+  transition: 0.3s ease;
+}
+
+.moon-page .fact-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(139, 92, 246, 0.45);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.moon-page .fact-card h3 {
+  margin: 0 0 12px;
+
+  color: #9b6cff;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+}
+
+.moon-page .fact-card span {
+  color: #ffffff;
+
+  font-size: 22px;
+
+  font-weight: 600;
+}
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.moon-page .about-section {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 120px 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.moon-page .about-image {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.moon-page .about-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(139, 92, 246, 0.18),
+      transparent 70%
+    );
+
+  filter: blur(15px);
+}
+
+.moon-page .about-image img {
+  position: relative;
+
+  width: 100%;
+  max-width: 480px;
+
+  height: 480px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.moon-page .about-content > span {
+  color: #9b6cff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.moon-page .about-content h2 {
+  margin: 18px 0 25px;
+
+  font-size: clamp(34px, 4vw, 54px);
+
+  line-height: 1.1;
+}
+
+.moon-page .about-content p {
+  margin-bottom: 20px;
+
+  color: #aeb0bf;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   INTERESTING FACTS
+   ========================================================= */
+
+.moon-page .interesting-section {
+  padding: 110px 7%;
+
+  background: #090a15;
+}
+
+.moon-page .section-header {
+  max-width: 800px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.moon-page .section-header > span {
+  color: #9b6cff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+.moon-page .section-header h2 {
+  margin: 18px 0;
+
+  font-size: clamp(35px, 5vw, 58px);
+
+  line-height: 1.1;
+}
+
+.moon-page .section-header p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #a8a9b8;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.moon-page .facts-cards {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.moon-page .fact-box {
+  padding: 30px 25px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.moon-page .fact-box:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(139, 92, 246, 0.4);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.moon-page .fact-icon {
+  margin-bottom: 22px;
+
+  font-size: 38px;
+}
+
+.moon-page .fact-box h3 {
+  margin: 0 0 14px;
+
+  font-size: 20px;
+}
+
+.moon-page .fact-box p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+/* =========================================================
+   MOON SURFACE
+   ========================================================= */
+
+.moon-page .surface-section {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 120px 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.moon-page .surface-image {
+  display: flex;
+
+  justify-content: center;
+}
+
+.moon-page .surface-image img {
+  width: 100%;
+
+  max-width: 500px;
+
+  height: 480px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.moon-page .surface-content > span {
+  color: #9b6cff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.moon-page .surface-content h2 {
+  margin: 18px 0 25px;
+
+  font-size: clamp(34px, 4vw, 54px);
+
+  line-height: 1.1;
+}
+
+.moon-page .surface-content > p {
+  margin-bottom: 20px;
+
+  color: #aeb0bf;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.moon-page .surface-highlights {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+.moon-page .surface-item {
+  padding: 20px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 16px;
+}
+
+.moon-page .surface-item h3 {
+  margin: 0 0 10px;
+
+  font-size: 16px;
+}
+
+.moon-page .surface-item p {
+  margin: 0;
+
+  color: #9698a8;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   MOON LANDSCAPE
+   ========================================================= */
+
+.moon-page .landscape-section {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 120px 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.moon-page .landscape-content > span {
+  color: #9b6cff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.moon-page .landscape-content h2 {
+  margin: 18px 0 25px;
+
+  font-size: clamp(34px, 4vw, 54px);
+
+  line-height: 1.1;
+}
+
+.moon-page .landscape-content p {
+  margin-bottom: 20px;
+
+  color: #aeb0bf;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.moon-page .landscape-image {
+  display: flex;
+
+  justify-content: center;
+}
+
+.moon-page .landscape-image img {
+  width: 100%;
+
+  max-width: 500px;
+
+  height: 480px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================================
+   MISSIONS
+   ========================================================= */
+
+.moon-page .missions-section {
+  padding: 110px 7%;
+
+  background: #090a15;
+}
+
+.moon-page .timeline {
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.moon-page .mission-card {
+  padding: 30px 25px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.moon-page .mission-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(139, 92, 246, 0.4);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.moon-page .mission-card .year {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  padding: 7px 14px;
+
+  border-radius: 20px;
+
+  color: #ffffff;
+
+  background: rgba(139, 92, 246, 0.15);
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.moon-page .mission-card h3 {
+  margin: 0 0 15px;
+
+  font-size: 21px;
+}
+
+.moon-page .mission-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.moon-page .gallery-section {
+  padding: 110px 7%;
+
+  background: #070812;
+}
+
+.moon-page .gallery-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.moon-page .gallery-card {
+  position: relative;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #10111d;
+}
+
+.moon-page .gallery-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.moon-page .gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+.moon-page .gallery-overlay {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  padding: 45px 20px 20px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(4, 5, 12, 0.9)
+    );
+}
+
+.moon-page .gallery-overlay h3 {
+  margin: 0;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   DID YOU KNOW
+   ========================================================= */
+
+.moon-page .did-section {
+  padding: 110px 7%;
+
+  background: #090a15;
+}
+
+.moon-page .did-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.moon-page .did-card {
+  padding: 30px 25px;
+
+  text-align: center;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.moon-page .did-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.moon-page .did-card > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-size: 35px;
+}
+
+.moon-page .did-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 19px;
+}
+
+.moon-page .did-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   EXPLORE OTHER MOONS
+   ========================================================= */
+
+.moon-page .next-moons {
+  padding: 110px 7%;
+
+  background: #070812;
+}
+
+.moon-page .next-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+.moon-page .next-card {
+  overflow: hidden;
+
+  padding-bottom: 25px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.moon-page .next-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.moon-page .next-card img {
+  width: 100%;
+
+  height: 250px;
+
+  object-fit: cover;
+}
+
+.moon-page .next-card h3,
+.moon-page .next-card p,
+.moon-page .next-card a {
+  margin-left: 25px;
+
+  margin-right: 25px;
+}
+
+.moon-page .next-card h3 {
+  margin-top: 22px;
+
+  margin-bottom: 10px;
+
+  font-size: 25px;
+}
+
+.moon-page .next-card p {
+  min-height: 65px;
+
+  margin-bottom: 20px;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.moon-page .next-card a {
+  display: inline-flex;
+
+  padding: 10px 20px;
+
+  border: 1px solid rgba(139, 92, 246, 0.5);
+
+  border-radius: 25px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition: 0.3s ease;
+}
+
+.moon-page .next-card a:hover {
+  background: #8b5cf6;
+
+  border-color: #8b5cf6;
+}
+
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.moon-page .faq-section {
+  padding: 110px 7%;
+
+  background: #090a15;
+}
+
+.moon-page .faq-container {
+  max-width: 900px;
+
+  margin: auto;
+}
+
+.moon-page .faq-container details {
+  margin-bottom: 15px;
+
+  padding: 22px 25px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 15px;
+
+  transition: 0.3s ease;
+}
+
+.moon-page .faq-container details:hover {
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+.moon-page .faq-container summary {
+  cursor: pointer;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  list-style: none;
+}
+
+.moon-page .faq-container summary::-webkit-details-marker {
+  display: none;
+}
+
+.moon-page .faq-container summary::after {
+  content: "+";
+
+  float: right;
+
+  color: #9b6cff;
+
+  font-size: 22px;
+}
+
+.moon-page .faq-container details[open] summary::after {
+  content: "−";
+}
+
+.moon-page .faq-container details p {
+  margin: 18px 0 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .moon-page .facts-cards,
+  .moon-page .did-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .moon-page .gallery-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .moon-page .timeline {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .moon-hero {
+    min-height: 650px;
+  }
+
+  .moon-hero .hero-content {
+    width: 88%;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  .moon-hero .hero-content p {
+    margin: auto;
+
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .moon-page .facts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .moon-page .about-section,
+  .moon-page .surface-section,
+  .moon-page .landscape-section {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .moon-page .surface-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .moon-page .surface-image {
+    order: 1;
+  }
+
+  .moon-page .surface-content {
+    order: 2;
+  }
+
+  .moon-page .landscape-content {
+    order: 2;
+  }
+
+  .moon-page .landscape-image {
+    order: 1;
+  }
+
+  .moon-page .next-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .moon-page .facts-cards,
+  .moon-page .did-grid,
+  .moon-page .gallery-grid,
+  .moon-page .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .moon-page .about-image img,
+  .moon-page .surface-image img,
+  .moon-page .landscape-image img {
+    height: 330px;
+  }
+
+  .moon-page .gallery-card {
+    height: 260px;
+  }
+
+  .moon-page .section-header {
+    margin-bottom: 40px;
+  }
+
+  .moon-page .interesting-section,
+  .moon-page .missions-section,
+  .moon-page .gallery-section,
+  .moon-page .did-section,
+  .moon-page .next-moons,
+  .moon-page .faq-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+}

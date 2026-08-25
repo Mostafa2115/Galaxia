@@ -1,0 +1,42 @@
+/* ===========================
+   Bookmark Button Component Styles
+=========================== */
+
+.bookmark-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #b5b5c8;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.bookmark-btn:hover {
+  background: rgba(139, 92, 246, 0.25);
+  border-color: #8b5cf6;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.bookmark-btn.saved {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+}
+
+.bookmark-btn.saved:hover {
+  background: #7c3aed;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.7);
+}
+
+.bookmark-btn svg {
+  font-size: 15px;
+}

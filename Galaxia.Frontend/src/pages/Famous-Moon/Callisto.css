@@ -1,0 +1,1163 @@
+/* =========================================================
+   CALLISTO PAGE
+   ========================================================= */
+
+.callisto-page {
+  min-height: 100vh;
+
+  background: #070812;
+
+  color: #ffffff;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.callisto-hero {
+  position: relative;
+
+  min-height: 720px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #05060c;
+}
+
+.callisto-hero .hero-bg {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: brightness(0.5);
+
+  transform: scale(1.02);
+}
+
+.callisto-hero .hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 5, 12, 0.95) 0%,
+      rgba(4, 5, 12, 0.68) 45%,
+      rgba(4, 5, 12, 0.25) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #070812 0%,
+      transparent 35%
+    );
+}
+
+.callisto-hero .hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(900px, 88%);
+
+  margin-left: 7%;
+
+  padding-top: 80px;
+}
+
+.callisto-number {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #b9a98d;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+.callisto-hero h1 {
+  margin: 0 0 25px;
+
+  font-size: clamp(60px, 9vw, 120px);
+
+  line-height: 0.95;
+
+  font-weight: 700;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #c9bea8
+  );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.callisto-hero .hero-content p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #c0c1cd;
+
+  font-size: 18px;
+
+  line-height: 1.85;
+}
+
+.callisto-page .hero-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 38px;
+}
+
+.callisto-page .hero-buttons button {
+  padding: 14px 27px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.callisto-page .hero-buttons .btn-primary {
+  border: none;
+
+  background: #8f8065;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(143, 128, 101, 0.25);
+}
+
+.callisto-page .hero-buttons .btn-primary:hover {
+  transform: translateY(-4px);
+
+  background: #aa9a7c;
+
+  box-shadow:
+    0 15px 40px rgba(143, 128, 101, 0.4);
+}
+
+.callisto-page .hero-buttons .btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: #ffffff;
+
+  backdrop-filter: blur(10px);
+}
+
+.callisto-page .hero-buttons .btn-secondary:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(143, 128, 101, 0.6);
+
+  background: rgba(143, 128, 101, 0.12);
+}
+
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+
+.callisto-page .facts-section {
+  padding: 110px 7%;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #070812 0%,
+      #090a15 100%
+    );
+}
+
+.callisto-page .facts-section h2 {
+  margin: 0 0 15px;
+
+  font-size: clamp(35px, 5vw, 58px);
+
+  line-height: 1.1;
+}
+
+.callisto-page .facts-section > p {
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+
+  color: #a8a9b8;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.callisto-page .facts-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.callisto-page .fact-card {
+  padding: 30px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 20px;
+
+  transition: 0.3s ease;
+}
+
+.callisto-page .fact-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(143, 128, 101, 0.45);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.callisto-page .fact-card h3 {
+  margin: 0 0 12px;
+
+  color: #b9a98d;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+}
+
+.callisto-page .fact-card span {
+  color: #ffffff;
+
+  font-size: 22px;
+
+  font-weight: 600;
+}
+/* =========================================================
+   ABOUT CALLISTO
+   ========================================================= */
+
+.callisto-page .about-section {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 120px 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.callisto-page .about-image {
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.callisto-page .about-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(143, 128, 101, 0.18),
+      transparent 70%
+    );
+
+  filter: blur(15px);
+}
+
+.callisto-page .about-image img {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 480px;
+
+  height: 480px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.callisto-page .about-content > span {
+  color: #b9a98d;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.callisto-page .about-content h2 {
+  margin: 18px 0 25px;
+
+  font-size: clamp(34px, 4vw, 54px);
+
+  line-height: 1.1;
+}
+
+.callisto-page .about-content p {
+  margin-bottom: 20px;
+
+  color: #aeb0bf;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   INTERESTING FACTS
+   ========================================================= */
+
+.callisto-page .interesting-section {
+  padding: 110px 7%;
+
+  background: #090a15;
+}
+
+.callisto-page .section-header {
+  max-width: 800px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.callisto-page .section-header > span {
+  color: #b9a98d;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+.callisto-page .section-header h2 {
+  margin: 18px 0;
+
+  font-size: clamp(35px, 5vw, 58px);
+
+  line-height: 1.1;
+}
+
+.callisto-page .section-header p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #a8a9b8;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.callisto-page .facts-cards {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.callisto-page .fact-box {
+  padding: 30px 25px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.callisto-page .fact-box:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(143, 128, 101, 0.4);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.callisto-page .fact-icon {
+  margin-bottom: 22px;
+
+  font-size: 38px;
+}
+
+.callisto-page .fact-box h3 {
+  margin: 0 0 14px;
+
+  font-size: 20px;
+}
+
+.callisto-page .fact-box p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+/* =========================================================
+   CALLISTO SURFACE
+   ========================================================= */
+
+.callisto-page .surface-section {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 120px 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.callisto-page .surface-image {
+  display: flex;
+
+  justify-content: center;
+}
+
+.callisto-page .surface-image img {
+  width: 100%;
+
+  max-width: 500px;
+
+  height: 480px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.callisto-page .surface-content > span {
+  color: #b9a98d;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.callisto-page .surface-content h2 {
+  margin: 18px 0 25px;
+
+  font-size: clamp(34px, 4vw, 54px);
+
+  line-height: 1.1;
+}
+
+.callisto-page .surface-content > p {
+  margin-bottom: 20px;
+
+  color: #aeb0bf;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.callisto-page .surface-highlights {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+.callisto-page .surface-item {
+  padding: 20px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 16px;
+}
+
+.callisto-page .surface-item h3 {
+  margin: 0 0 10px;
+
+  font-size: 16px;
+}
+
+.callisto-page .surface-item p {
+  margin: 0;
+
+  color: #9698a8;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CALLISTO LANDSCAPE
+   ========================================================= */
+
+.callisto-page .landscape-section {
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 120px 7%;
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.callisto-page .landscape-content > span {
+  color: #b9a98d;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.callisto-page .landscape-content h2 {
+  margin: 18px 0 25px;
+
+  font-size: clamp(34px, 4vw, 54px);
+
+  line-height: 1.1;
+}
+
+.callisto-page .landscape-content p {
+  margin-bottom: 20px;
+
+  color: #aeb0bf;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.callisto-page .landscape-image {
+  display: flex;
+
+  justify-content: center;
+}
+
+.callisto-page .landscape-image img {
+  width: 100%;
+
+  max-width: 500px;
+
+  height: 480px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================================================
+   MISSIONS
+   ========================================================= */
+
+.callisto-page .missions-section {
+  padding: 110px 7%;
+
+  background: #090a15;
+}
+
+.callisto-page .timeline {
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.callisto-page .mission-card {
+  padding: 30px 25px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.callisto-page .mission-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(143, 128, 101, 0.4);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.callisto-page .mission-card .year {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  padding: 7px 14px;
+
+  border-radius: 20px;
+
+  color: #ffffff;
+
+  background: rgba(143, 128, 101, 0.15);
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.callisto-page .mission-card h3 {
+  margin: 0 0 15px;
+
+  font-size: 21px;
+}
+
+.callisto-page .mission-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.callisto-page .gallery-section {
+  padding: 110px 7%;
+  background: #070812;
+}
+
+.callisto-page .gallery-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.callisto-page .gallery-card {
+  position: relative;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #10111d;
+}
+
+.callisto-page .gallery-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.callisto-page .gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+.callisto-page .gallery-overlay {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  padding: 45px 20px 20px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(4, 5, 12, 0.9)
+    );
+}
+
+.callisto-page .gallery-overlay h3 {
+  margin: 0;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   DID YOU KNOW
+   ========================================================= */
+
+.callisto-page .did-section {
+  padding: 110px 7%;
+  background: #090a15;
+}
+
+.callisto-page .did-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.callisto-page .did-card {
+  padding: 30px 25px;
+
+  text-align: center;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.callisto-page .did-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(143, 128, 101, 0.4);
+}
+
+.callisto-page .did-card > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-size: 35px;
+}
+
+.callisto-page .did-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 19px;
+}
+
+.callisto-page .did-card p {
+  margin: 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   EXPLORE OTHER MOONS
+   ========================================================= */
+
+.callisto-page .next-moons {
+  padding: 110px 7%;
+  background: #070812;
+}
+
+.callisto-page .next-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+.callisto-page .next-card {
+  overflow: hidden;
+
+  padding-bottom: 25px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 22px;
+
+  transition: 0.3s ease;
+}
+
+.callisto-page .next-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(143, 128, 101, 0.4);
+}
+
+.callisto-page .next-card img {
+  width: 100%;
+  height: 250px;
+
+  object-fit: cover;
+}
+
+.callisto-page .next-card h3,
+.callisto-page .next-card p,
+.callisto-page .next-card a {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.callisto-page .next-card h3 {
+  margin-top: 22px;
+  margin-bottom: 10px;
+
+  font-size: 25px;
+}
+
+.callisto-page .next-card p {
+  min-height: 65px;
+
+  margin-bottom: 20px;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.callisto-page .next-card a {
+  display: inline-flex;
+
+  padding: 10px 20px;
+
+  border: 1px solid rgba(143, 128, 101, 0.5);
+
+  border-radius: 25px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition: 0.3s ease;
+}
+
+.callisto-page .next-card a:hover {
+  background: #8f8065;
+
+  border-color: #8f8065;
+}
+
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.callisto-page .faq-section {
+  padding: 110px 7%;
+  background: #090a15;
+}
+
+.callisto-page .faq-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.callisto-page .faq-container details {
+  margin-bottom: 15px;
+
+  padding: 22px 25px;
+
+  background: #10111d;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 15px;
+
+  transition: 0.3s ease;
+}
+
+.callisto-page .faq-container details:hover {
+  border-color: rgba(143, 128, 101, 0.35);
+}
+
+.callisto-page .faq-container summary {
+  cursor: pointer;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  list-style: none;
+}
+
+.callisto-page .faq-container summary::-webkit-details-marker {
+  display: none;
+}
+
+.callisto-page .faq-container summary::after {
+  content: "+";
+
+  float: right;
+
+  color: #b9a98d;
+
+  font-size: 22px;
+}
+
+.callisto-page .faq-container details[open] summary::after {
+  content: "−";
+}
+
+.callisto-page .faq-container details p {
+  margin: 18px 0 0;
+
+  color: #a5a7b6;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .callisto-page .facts-cards,
+  .callisto-page .did-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .callisto-page .gallery-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .callisto-page .timeline {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .callisto-hero {
+    min-height: 650px;
+  }
+
+  .callisto-hero .hero-content {
+    width: 88%;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  .callisto-hero .hero-content p {
+    margin: auto;
+
+    font-size: 15px;
+  }
+
+  .callisto-page .hero-buttons {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .callisto-page .facts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .callisto-page .about-section,
+  .callisto-page .surface-section,
+  .callisto-page .landscape-section {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .callisto-page .surface-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .callisto-page .surface-image {
+    order: 1;
+  }
+
+  .callisto-page .surface-content {
+    order: 2;
+  }
+
+  .callisto-page .landscape-content {
+    order: 2;
+  }
+
+  .callisto-page .landscape-image {
+    order: 1;
+  }
+
+  .callisto-page .next-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .callisto-page .facts-cards,
+  .callisto-page .did-grid,
+  .callisto-page .gallery-grid,
+  .callisto-page .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .callisto-page .about-image img,
+  .callisto-page .surface-image img,
+  .callisto-page .landscape-image img {
+    height: 330px;
+  }
+
+  .callisto-page .gallery-card {
+    height: 260px;
+  }
+
+  .callisto-page .section-header {
+    margin-bottom: 40px;
+  }
+
+  .callisto-page .interesting-section,
+  .callisto-page .missions-section,
+  .callisto-page .gallery-section,
+  .callisto-page .did-section,
+  .callisto-page .next-moons,
+  .callisto-page .faq-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+}
