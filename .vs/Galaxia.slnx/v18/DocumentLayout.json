@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\mos18\\source\\repos\\Galaxia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3D084C6-9891-245B-69A4-7FFFAA227A95}|Galaxia.csproj|c:\\users\\mos18\\source\\repos\\galaxia\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3D084C6-9891-245B-69A4-7FFFAA227A95}|Galaxia.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0F6C6AC-283B-A8C5-DF6A-212DC78AFF5C}|Galaxia.Backend\\Galaxia.csproj|c:\\users\\mos18\\source\\repos\\galaxia\\galaxia.backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0F6C6AC-283B-A8C5-DF6A-212DC78AFF5C}|Galaxia.Backend\\Galaxia.csproj|solutionrelative:galaxia.backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,13 +32,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\mos18\\source\\repos\\Galaxia\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\mos18\\source\\repos\\Galaxia\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADIAAAArAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\mos18\\source\\repos\\Galaxia\\Galaxia.Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Galaxia.Backend\\Program.cs",
+              "ToolTip": "C:\\Users\\mos18\\source\\repos\\Galaxia\\Galaxia.Backend\\Program.cs",
+              "RelativeToolTip": "Galaxia.Backend\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-23T17:56:02.937Z",
+              "WhenOpened": "2026-08-28T18:44:03.714Z",
               "EditorCaption": ""
             }
           ]
